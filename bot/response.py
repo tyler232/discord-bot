@@ -41,7 +41,7 @@ def get_chat_response(original_message: str, user_name: str) -> str:
 
     best_response = max(hits)
     response_idx = hits.index(best_response)
-    response_message = response_data[response_idx]["client_response"]
+    response_message = random.choice(response_data[response_idx]["client_response"])
 
     if best_response != 0:
         # if it's a greeting message, add user's name behind
