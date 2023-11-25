@@ -46,5 +46,42 @@
         "user_input": ["bye", "88", "see you", "goodbye", "byebye"],
         "client_response": ["Bye, have a good one.", "Goodbye", "Byebye"],
         "required_words": []
+    },
+    {
+        "response_type": "preference",
+        "user_input": ["do", "you", "like", "chicken"],
+        "client_response": ["Yes, I love chicken.", "Yes!", "Yes, I do."],
+        "required_words": ["do", "you", "like", "chicken"]
+    },
+    {
+        "response_type": "preference",
+        "user_input": ["do", "you", "like", "fish"],
+        "client_response": ["Yes, I love fish.", "Yes!", "Yes, I do."],
+        "required_words": ["do", "you", "like", "fish"]
+    },
+    {
+        "response_type": "preference",
+        "user_input": ["do", "you", "like"],
+        "client_response": ["I like chicken and fish.", "No, but I like chicken and fish"],
+        "required_words": ["do", "you", "like"]
+    },
+    {
+        "response_type": "hatred",
+        "user_input": ["hate"],
+        "client_response": ["I don't hate anyone or anything"],
+        "required_words": ["hate"]
+    },
+    {
+        "response_type": "how_question",
+        "user_input": ["how", "how's"],
+        "client_response": ["Good"],
+        "required_words": []
+    },
+    {
+        "response_type": "what_question",
+        "user_input": ["what", "what's"],
+        "client_response": ["If you need help on anything please use command, I'm here to help",
+                            "If you need help on anything @ me and type ?help"],
+        "required_words": []
     }
 ]

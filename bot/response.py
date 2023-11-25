@@ -59,10 +59,10 @@ def get_response(original_message: str, user_name: str) -> str:
     print(f'message received: "{message}"')     # debug message
 
     # command !roll generate randomint from 1 to 6
-    if (message == '!roll'):
+    if message.startswith('!roll'):
         return str(random.randint(1, 6))
     # command !flip randomly generate head or tail
-    elif (message == '!flip'):
+    elif message.startswith('!flip'):
         return "head" if random.randint(0, 1) == 0 else "tail"
     # command !calc can let bot do math
     elif message.startswith('!calc'):
