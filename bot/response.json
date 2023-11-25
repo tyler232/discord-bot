@@ -1,0 +1,50 @@
+[
+    {
+        "response_type": "greeting",
+        "user_input": ["hi", "hello", "hey", "greeting"],
+        "client_response": "Hi",
+        "required_words": []
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["good", "morning"],
+        "client_response": "Good Morning",
+        "required_words": ["morning"]
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["good", "afternoon"],
+        "client_response": "Good Afternoon",
+        "required_words": ["good", "afternoon"]
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["good", "evening"],
+        "client_response": "Good Evening",
+        "required_words": ["good", "evening"]
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["good", "night"],
+        "client_response": "Good Night",
+        "required_words": ["good", "night"]
+    },
+    {
+        "response_type": "greeting_second",
+        "user_input": ["how", "are", "you"],
+        "client_response": "I'm good!",
+        "required_words": ["how", "are", "you"]
+    },
+    {
+        "response_type": "greeting_second",
+        "user_input": ["what's", "up"],
+        "client_response": "not much",
+        "required_words": ["what's", "up"]
+    },
+    {
+        "response_type": "leaving",
+        "user_input": ["bye", "88", "see you", "goodbye"],
+        "client_response": "Bye, have a good one.",
+        "required_words": []
+    }
+]
