@@ -29,8 +29,13 @@ def run_discord_bot():
     async def on_voice_state_update(member, before, after):
         # Check if the member joined a voice channel
         if before.channel is None and after.channel is not None:
+            # send greeting message at main channel
             channel_name = after.channel.name
-            await main_channel.send(f'Welcome to {channel_name}, {member.name}!')
+            await main_channel.send(f'Welcome to {channel_name}, {member.display_name}!')
+        # Check if the member left the channel
+        if before.channel and not after.channel:
+            # send goodbye message at main channel
+            await main_channel.send(f"Goodbye {member.display_name}!")
         
     @client.event
     async def on_message(message):
