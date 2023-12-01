@@ -10,8 +10,6 @@ import tensorflow as tf
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-
-from training import update_model, get_training_data
 import wikipedia_query
 
 lemmatizer = WordNetLemmatizer()
