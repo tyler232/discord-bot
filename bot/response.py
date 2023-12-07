@@ -12,6 +12,15 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import wikipedia_query
 
+# Install internal package in nltk if not already
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('corpora/wordnet')
+except (LookupError, FileNotFoundError):
+    print("NLTK data not found. Downloading...")
+    nltk.download('punkt')
+    nltk.download('wordnet')
+
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('knowledge.json').read())
 

@@ -6,6 +6,17 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from dotenv import load_dotenv
 
+# Install internal package in nltk if not already
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('corpora/wordnet')
+    nltk.data.find('corpora/stopwords')
+except (LookupError, FileNotFoundError):
+    print("NLTK data not found. Downloading...")
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    nltk.download('wordnet')
+
 # Load environment variables from .env file
 load_dotenv()
 user_agent = os.environ.get("WIKIPEDIA_USER_AGENT")
